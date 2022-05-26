@@ -1,3 +1,18 @@
+/* Usuários */
+INSERT INTO usuarios VALUES
+(NULL, "user", "$2a$10$MZYOt.MJWagXfhtytOlOVOXYetA7fQnyWQjidHW.qgbTfTHdyBe52"),
+(NULL, "dungeonmaster", "$2a$10$ZI4nLiDut1vk8K.Qug22yOH.F5pzpvXLSKIVrNXRYMsZSBDK3S7WC");
+
+/* Roles */
+INSERT INTO roles VALUES
+(NULL, "ROLE_USER"),
+(NULL, "ROLE_ADMIN");
+
+INSERT INTO usuarios_roles VALUES
+(1, 1),
+(2, 1),
+(2, 2);
+
 /* Tendências */
 INSERT INTO tendencias VALUES
 (NULL, 'Leal e Bom', 'LB', 'Leal e Bom é a tendência de criaturas que se pode contar para fazer o que é correto como esperado pela sociedade. Dragões dourados, paladinos e muitos anões são leais e bons.'),
@@ -114,6 +129,9 @@ INSERT INTO criaturas VALUES
 (NULL, 'Kleber', 'humanoide'),
 (NULL, 'Guaxi', 'besta');
 
+SELECT * FROM usuarios;
+SELECT * FROM roles;
+SELECT * FROM usuarios_roles;
 SELECT * FROM tendencias;
 SELECT * FROM idiomas;
 SELECT * FROM atributos;
