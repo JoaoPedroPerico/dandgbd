@@ -52,11 +52,11 @@ INSERT INTO atributos(nomeAtributo, abreviacaoAtributo, tomateAtributo, descrica
 /*INSERT múltiplo sem definição de colunas*/
 INSERT INTO atributos VALUES
 (NULL, 'Constituição', 'CON', 'Constituição define o quão capaz você é de resistir ao mal estar após comer um tomate podre, ou até mesmo não passar mal', 'Constituição representa o vigor, saúde, resistência e energia vital de um personagem, em combate ela contribui diretamente para os seus pontos de vida e capacidade de resistir a venenos e outros efeitos, e fora de combate quando você tenta ir além de suas capacidades'),
-(NULL, 'Inteligência', 'INT', 'Ser inteligênte é saber que o tomate é uma fruta', 'Inteligência mede raciocínio e memória, em combate pode ser usada para conjuração de magias, e fora de combate é util em varios aspectos como conhecimento gerais, religiões, investigação, arcanismo e mais');
+(NULL, 'Inteligência', 'INT', 'Ser inteligênte é saber que o tomate é uma fruta', 'Inteligência mede acuidade mental, raciocínio e memória, em combate pode ser usada por magos para conjuração de magias, e fora de combate é util em varios aspectos como conhecimento gerais, religiões, investigação, arcanismo e mais');
 /*INSERT múltiplo com definição de colunas*/
 INSERT INTO atributos(nomeAtributo, abreviacaoAtributo, tomateAtributo, descricaoAtributo) VALUES
-('Sabedoria', 'SAB', 'Sábio é aquele que sabe que apesar de ser fruta, um tomate não é usado em uma salada de frutas', 'A sabedoria reflete na percepção e intuição, em combate pode ser usada para conjurar magias por druidas e clérigos, e fora de combate pode ser usada para entender sentimentos ou captar informações de forma geral'),
-('Carisma', 'CAR', 'Carismático é aquele que consegue vender uma salada de fruta mesmo essa sendo feita com tomates', 'Carisma mede a capacidade de interação e força da personalidade, em combate é usada por bardos, bruxos feiticeiros e paladinos para conjurar magias, e fora de combate se faz útil quando se tenta influenciar ou entreter os outros');
+('Sabedoria', 'SAB', 'Sábio é aquele que sabe que apesar de ser fruta, um tomate não é usado em uma salada de frutas', 'A sabedoria reflete na percepção, intuição e quão sintonizado ao mundo você é, em combate pode ser usada para conjurar magias por druidas e clérigos, e fora de combate pode ser usada para entender sentimentos ou captar informações de forma geral'),
+('Carisma', 'CAR', 'Carismático é aquele que consegue vender uma salada de fruta mesmo essa sendo feita com tomates', 'Carisma mede a capacidade de interação e força da personalidade, em combate é usada por bardos, bruxos, feiticeiros e paladinos para conjurar magias, e fora de combate se faz útil quando se tenta influenciar ou interagir com os outros');
 
 /* Pericias */
 INSERT INTO pericias VALUES
@@ -122,6 +122,9 @@ INSERT INTO exaustao VALUES
 (NULL, 5, 'Deslocamento reduzido à 0', 15),
 (NULL, 6, 'Morte', 15);
 
+INSERT INTO talentos VALUES
+(NULL, "Agarrarador(?)", "Você aprimorou as habilidades necessárias para tirar proveito quando agarrando uma criatura em combate. Você ganha os seguintes benefícios: \nVocê tem vantagem nas jogadas de ataque contra uma criatura que está agarrando. \nVocê pode usar sua ação para tentar imobilizar a criatura que está agarrando. Para isso, realize outro teste da agarrar. Se tiver sucesso, você e a criatura estão IMPEDIDOS até que o agarrão termine", 13, 1);
+
 INSERT INTO criaturas VALUES
 (NULL, 'Griffin', 'humanoide'),
 (NULL, 'Jessie', 'humanoide'),
@@ -140,3 +143,4 @@ SELECT * FROM tiposDeDano;
 SELECT * FROM condicoes;
 SELECT * FROM exaustao;
 SELECT * FROM criaturas;
+SELECT * FROM talentos;

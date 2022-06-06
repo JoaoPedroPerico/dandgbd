@@ -71,6 +71,15 @@ CREATE TABLE exaustao (
     FOREIGN KEY (fkCondicao) REFERENCES condicoes(idCondicao)
 );
 
+CREATE TABLE talentos (
+	idTalento INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nomeTalento VARCHAR(50),
+    descricaoTalento VARCHAR(500),
+    valorMinimoAtributo INT,
+    fkAtributo INT,
+    FOREIGN KEY (fkAtributo) REFERENCES atributos(idAtributo)
+);
+
 CREATE TABLE criaturas (
 	idCriatura INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeCriatura VARCHAR(50),
