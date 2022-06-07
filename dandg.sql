@@ -75,9 +75,25 @@ CREATE TABLE talentos (
 	idTalento INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeTalento VARCHAR(50),
     descricaoTalento VARCHAR(500),
-    valorMinimoAtributo INT,
-    fkAtributo INT,
-    FOREIGN KEY (fkAtributo) REFERENCES atributos(idAtributo)
+    preReqTalento VARCHAR(250)
+);
+
+CREATE TABLE definicoes (
+	idDefinicao INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nomeDefinicao VARCHAR(25),
+    descricaoDefinicao VARCHAR(250)
+);
+
+CREATE TABLE regras (
+	idRegra INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nomeRegra VARCHAR(25),
+    descricaoRegra VARCHAR(250)
+);
+
+CREATE TABLE propriedadesArmas (
+	idPropriedadeArma INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nomePorpriedadeArma VARCHAR(25),
+    descricaoPropriedadeArma VARCHAR(250)
 );
 
 CREATE TABLE criaturas (

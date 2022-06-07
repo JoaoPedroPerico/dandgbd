@@ -1,12 +1,12 @@
 /* Usuários */
 INSERT INTO usuarios VALUES
-(NULL, "user", "$2a$10$MZYOt.MJWagXfhtytOlOVOXYetA7fQnyWQjidHW.qgbTfTHdyBe52"),
-(NULL, "dungeonmaster", "$2a$10$ZI4nLiDut1vk8K.Qug22yOH.F5pzpvXLSKIVrNXRYMsZSBDK3S7WC");
+(NULL, 'user', '$2a$10$MZYOt.MJWagXfhtytOlOVOXYetA7fQnyWQjidHW.qgbTfTHdyBe52'),
+(NULL, 'dungeonmaster', '$2a$10$ZI4nLiDut1vk8K.Qug22yOH.F5pzpvXLSKIVrNXRYMsZSBDK3S7WC');
 
 /* Roles */
 INSERT INTO roles VALUES
-(NULL, "ROLE_USER"),
-(NULL, "ROLE_ADMIN");
+(NULL, 'ROLE_USER'),
+(NULL, 'ROLE_ADMIN');
 
 INSERT INTO usuarios_roles VALUES
 (1, 1),
@@ -23,7 +23,8 @@ INSERT INTO tendencias VALUES
 (NULL, 'Caótico e Neutro', 'CN', 'Caótico e Neutro é a tendência das criaturas que seguem seus caprichos, mantendo sua liberdade pessoal acima de tudo. Muitos bárbaros e ladinos, e alguns bardos, são caóticos e neutros.'),
 (NULL, 'Leal e Mau', 'LM', 'Leal e Mau é a tendência das criaturas que conseguem metodicamente tudo o que querem, dentro dos limites de uma tradição, lei ou ordem. Diabos, dragões azuis e hobgoblins são leais e maus.'),
 (NULL, 'Neutro e Mau', 'NM', 'Neutro e Mau é a tendência daqueles que farão tudo o que puderem, sem compaixão ou remorso. Muitos drow, alguns gigantes das nuvens e yugoloths são neutros e maus.'),
-(NULL, 'Caótico e Mau', 'CM', 'Caótico e Mau é a tendência de criaturas que agem com violência arbitrária, estimulada por sua ganância, ódio ou sede de sangue. Demônios, dragões vermelhos e orcs são caóticos e maus.');
+(NULL, 'Caótico e Mau', 'CM', 'Caótico e Mau é a tendência de criaturas que agem com violência arbitrária, estimulada por sua ganância, ódio ou sede de sangue. Demônios, dragões vermelhos e orcs são caóticos e maus.'),
+(NULL, 'Imparcial', 'I', 'Imparcial na verdade não é uma tendência, mas sim, define as criaturas que não tem capacidade racional para realizar escolhas morais ou éticas.');
 
 /* Idiomas */
 INSERT INTO idiomas VALUES
@@ -123,7 +124,19 @@ INSERT INTO exaustao VALUES
 (NULL, 6, 'Morte', 15);
 
 INSERT INTO talentos VALUES
-(NULL, "Agarrarador(?)", "Você aprimorou as habilidades necessárias para tirar proveito quando agarrando uma criatura em combate. Você ganha os seguintes benefícios: \nVocê tem vantagem nas jogadas de ataque contra uma criatura que está agarrando. \nVocê pode usar sua ação para tentar imobilizar a criatura que está agarrando. Para isso, realize outro teste da agarrar. Se tiver sucesso, você e a criatura estão IMPEDIDOS até que o agarrão termine", 13, 1);
+(NULL, 'Imobilizador', 'Você aprimorou as habilidades necessárias para tirar proveito quando agarrando uma criatura em combate. Você ganha os seguintes benefícios: \nVocê tem vantagem nas jogadas de ataque contra uma criatura que está agarrando. \nVocê pode usar sua ação para tentar imobilizar a criatura que está agarrando. Para isso, realize outro teste da agarrar. Se tiver sucesso, você e a criatura estão IMPEDIDOS até que o agarrão termine', 'Força 13 ou maior');
+
+INSERT INTO definicoes VALUES
+(NULL, 'Tendências', 'Uma criatura tipica do jogo tem uma tendência, o que descreve de forma ampla sua moral e atitudes pessoais. A tendência é a combinação de dois fatores: o primeiro é a moral (bom, mau ou neutro), o segundo define o comportamento perante a sociedade e as leis (leal, caótico ou neutro). Dessas combinações surgem as nove possíveis tendências. \nEsses resumos das nove tendências descrevem o comportamento típico de uma criatura que as tenham. Um indivíduo pode variar significantemente desse comportamento típico, poucas pessoas são perfeitamente e consistentemente fiéis aos preceitos de sua tendência. \nPara muitas criaturas pensantes, a tendência é uma escolha moral. Humanos, anões, elfos e outras raças humanoides podem escolher seguir o caminho do bem ou mau, ordem ou caos. De acordo com as lendas, os deuses de tendência boa, ao criar as raças deram a elas livre arbítrio para escolher seus caminhos morais, sabendo que bondade sem liberdade é escravidão. \nAs divindades malignas que criaram outras raças, por sua vez, fizeram essas para os servir. Essas raças tem forte inclinação inata de cooresponder a natureção de seus deuses. A maioria dos orcs compartilham a natureza violenta e selvagem de seus deuses, tendendo ao mau. Mesmo que um orc escolha uma boa tendência ele lutara contra sua tendência inata por toda a sua vida (Até mesmo os meio-orcs sentem uma leve influencia da tendência do deus dos orcs). \nA tendência é uma parte essencial de criaturas celestiais e demoníacas. Um diabo não escolhe ser leal e mau, e não tende a ser leal e mau, mas sim, é leal e mau em sua essência. Se este deixasse de ser leal e mau, deixaria de ser um diabo. \nA maioria das criaturas não tem capacidade racional, logo não tem tendência, elas são imparciais. Essas criaturas são incapazes de fazer escolhas morais ou éticas e agem de acordo com suas naturezas bestiais. Tubarões são predadores selvagens, por exemplo, mas não são maus, eles só não tem tendência.'),
+(NULL, 'Idiomas', 'Sua raça indica os idiomas que seu personagem consegue falar por padrão, e seu antecedente pode lhe dar acesso a um ou mais idiomas adicionais de sua escolha. Anote esses em sua ficha de personagem. \nEscolha seus idiomas dentre os padrões, ou que sejam comuns em sua campanha. Com a permissão do mestre você pode escolher um idioma exótico ou secreto, como as gírias de ladrão ou druídico. \nAlguns idiomas são, famílias de idiomas com muitos dialetos. Por exemplo, o idioma Primordial iclui os dialetos Auran, Aquan, Ignan e Terran, um para cada um dos quatro planos elementais. Criaturas que falam diferentes dialetos do mesmo idioma podem se comunicar entre si.'),
+(NULL, 'Talentos', 'Um talento representa um dom ou especialidade em uma área que concede ao seu personagem capacidades especiais. Talentos envolvem treinamento, experiência e habilidades além do que uma classe provem. \nEm determiandos níveis, sua classe te concede a característica Incremento no Valor de Habilidade. Usando a regra opcional de talentos, você pode abdicar dessa característica para adquirir um talento a sua escolha em troca. Você só pode escolher cada talento uma vez, a não ser que a descrição do talento diga o contrário. Você deve atender os pré-requisitos especificados no talento para adquiri-lo. Se você perder o pré-requisito, você não pode usar o talento até recuperar o pré-requisito. Por exemplo, o talento Imobilizador requer Força de 13 ou maior. Se sua Força for reduzida para menos de 13, talvez devido uma maldição de enfraquecer, você não pode se beneficiar do talento Imobilizador até que sua Força seja restaurada.'),
+(NULL, 'Condições', 'Condições alteram as capacidades de uma criatura de diversas maneiras e podem surgir como resultado de magias, características de classe, ataque de monstros ou outros efeitos. A maioria das condições, como cego, são prejudiciais, mas algumas, como invisível, podem ser vantajosas. \nUma condição dura até seu efeito ser anulado (a condição caido é anulada ao se levantar, por exemplo) ou até a duração especificada no efeito que impôs a condição. \nSe vários efeitos impõe a mesma condição a uma criatura, cada instância tem sua própria duração, mas a condição não tem seus efeitos agravados. Uma criatura ou tem ou não tem uma condição.');
+
+INSERT INTO regras VALUES
+(NULL, 'Inspiração', 'Inspiração é uma regra que o mestre pode usar para recompensar os jogadores por interpretarem o personagem de acordo com os seus traços de personalidade, ideais, vínculos e defeitos. Ao usar a inspiração, você pode usar seu traço de personalidade para ganhar uma vantagem na negociação com o Príncipe dos Mendigos. Ou inspiração pode permitir que você use o vínculo para com a defesa de sua aldeia natal para sobrepujar o efeito de uma magia sobre você. \nO mestre pode escolher dar inspiração por uma variedade de razões. Tipicamente, o mestre da essa recompensa quando você interpreta de acordo com seus traços de personalidade, cedendo às desvantagens presentes em defeitos e vínculos, ou retrata de outra maneira a verdade do seu personagem. O mestre deve dizer como você pode adquirir inspiração durante o jogo. \nVocê tem ou não tem inspiração, você não pode acumular multiplas inspirações para usar posteriromente. \nQuando você tem inspiração, você pode gasta-la quando você faz uma jogada de ataque, teste de resistência ou de habilidade. Gastar a inspiração te concede vantagem na jogada. \nAdicionalmente, se você tem inspiração, você pode recompensar outro jogador por uma boa interpretação, raciocínio inteligente, ou simplesmente por fazer algo emocionante no jogo. Quando outro personagem faz algo que realmente contribui para a história de maneira divertida e interessante, você pode abrir abrir desistir da sua inspiração para da-la ao outro personagem.');
+
+INSERT INTO propriedadesArmas VALUES
+(NULL, "Munição", "Você pode usar uma arma que tenha a propriedade de munição para fazer um ataque a distancia somente se você tem munição para disparar da arma. A cada vez que você atacar com a arma você ira gastar uma munição. Sacar a munição de uma aljava, ou outro recipiente, é parte do ataque (você precisa de uma mão livre para carregar uma arma de uma mão). Ao final do combate você pode gastar um minuto para recuperar metade das munições usadas fazendo uma busca no campo de batalha. \nSe você usar uma arma que tenha a propriedade de munição para fazer um ataque corpo a corpo você a usa como uma arma improvisada (veja sobre armas improvisadas). \nUma funda precisa estar carregada para ser usada desta forma.");
 
 INSERT INTO criaturas VALUES
 (NULL, 'Griffin', 'humanoide'),
@@ -142,5 +155,8 @@ SELECT * FROM pericias;
 SELECT * FROM tiposDeDano;
 SELECT * FROM condicoes;
 SELECT * FROM exaustao;
-SELECT * FROM criaturas;
 SELECT * FROM talentos;
+SELECT * from definicoes;
+SELECT * FROM regras;
+SELECT * FROM prorpiedadesArmas;
+SELECT * FROM criaturas;
