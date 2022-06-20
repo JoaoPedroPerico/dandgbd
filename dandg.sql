@@ -40,7 +40,9 @@ CREATE TABLE atributos (
     nomeAtributo varchar(255),
     abreviacaoAtributo varchar(3),
     tomateAtributo varchar(255),
-    descricaoAtributo varchar(500)
+    descricaoAtributo varchar(500),
+    testesDoAtributo varchar(500),
+    descricaoComplementar varchar(500)
 );
 
 CREATE TABLE pericias (
