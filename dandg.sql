@@ -41,14 +41,14 @@ CREATE TABLE atributos (
     abreviacaoAtributo varchar(3),
     tomateAtributo varchar(255),
     descricaoAtributo varchar(500),
-    testesDoAtributo varchar(500),
-    descricaoComplementar varchar(500)
+    testesDoAtributo varchar(1500),
+    descricaoComplementar varchar(1500)
 );
 
 CREATE TABLE pericias (
 	idPericia INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomePericia VARCHAR(20),
-    descricaoPericia VARCHAR(500),
+    descricaoPericia VARCHAR(1000),
     fkAtributo INT,
     FOREIGN KEY (fkAtributo) REFERENCES atributos(idAtributo)
 );
@@ -83,19 +83,19 @@ CREATE TABLE talentos (
 CREATE TABLE definicoes (
 	idDefinicao INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeDefinicao VARCHAR(25),
-    descricaoDefinicao VARCHAR(250)
+    descricaoDefinicao VARCHAR(2250)
 );
 
 CREATE TABLE regras (
 	idRegra INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeRegra VARCHAR(25),
-    descricaoRegra VARCHAR(250)
+    descricaoRegra VARCHAR(2250)
 );
 
 CREATE TABLE propriedadesArmas (
 	idPropriedadeArma INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomePorpriedadeArma VARCHAR(25),
-    descricaoPropriedadeArma VARCHAR(250)
+    descricaoPropriedadeArma VARCHAR(1250)
 );
 
 CREATE TABLE criaturas (

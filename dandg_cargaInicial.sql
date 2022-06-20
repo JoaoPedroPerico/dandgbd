@@ -165,5 +165,5 @@ SELECT * FROM exaustao;
 SELECT * FROM talentos;
 SELECT * from definicoes;
 SELECT * FROM regras;
-SELECT * FROM prorpiedadesArmas;
+SELECT * FROM propriedadesArmas;
 SELECT * FROM criaturas;
