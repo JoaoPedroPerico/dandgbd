@@ -98,6 +98,28 @@ CREATE TABLE propriedadesArmas (
     descricaoPropriedadeArma VARCHAR(1250)
 );
 
+CREATE TABLE tiposDeArma (
+	idTipoDeArma INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nomeTipoDeArma VARCHAR(50)
+);
+
+CREATE TABLE armas (
+	idArma INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nomeArma VARCHAR(25),
+    precoArma VARCHAR(10),
+    danoArma VARCHAR(25),
+    pesoArma VARCHAR(10),
+    fkTiposDeArma INT,
+    FOREIGN KEY (fkTiposDeArma) REFERENCES tiposDeArma(idTipoDeArma)
+);
+
+CREATE TABLE propriedadesArmas_armas (
+	fkPropriedadeArma INT NOT NULL,
+    fkArma INT NOT NULL,
+    FOREIGN KEY (fkUsuario) REFERENCES usuarios(idUsuario),
+    FOREIGN KEY (fkPropriedadeArma) REFERENCES propriedadesArmas(idPropriedadeArma)
+);
+
 CREATE TABLE criaturas (
 	idCriatura INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeCriatura VARCHAR(50),
