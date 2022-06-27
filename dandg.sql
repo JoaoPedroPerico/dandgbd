@@ -108,9 +108,11 @@ CREATE TABLE armas (
     nomeArma VARCHAR(25),
     precoArma VARCHAR(10),
     danoArma VARCHAR(25),
+    fkTipoDeDano INT,
     pesoArma VARCHAR(10),
     fkTiposDeArma INT,
-    FOREIGN KEY (fkTiposDeArma) REFERENCES tiposDeArma(idTipoDeArma)
+    FOREIGN KEY (fkTiposDeArma) REFERENCES tiposDeArma(idTipoDeArma),
+    FOREIGN KEY (fkTipoDeDano) REFERENCES tiposDeDano(idTipoDeDano)
 );
 
 CREATE TABLE propriedadesArmas_armas (

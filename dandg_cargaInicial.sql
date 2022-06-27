@@ -125,9 +125,11 @@ INSERT INTO exaustao VALUES
 (NULL, 5, 'Deslocamento reduzido à 0', 15),
 (NULL, 6, 'Morte', 15);
 
+/* Talentos */
 INSERT INTO talentos VALUES
 (NULL, 'Imobilizador', 'Você aprimorou as habilidades necessárias para tirar proveito quando agarrando uma criatura em combate. Você ganha os seguintes benefícios: \nVocê tem vantagem nas jogadas de ataque contra uma criatura que está agarrando. \nVocê pode usar sua ação para tentar imobilizar a criatura que está agarrando. Para isso, realize outro teste da agarrar. Se tiver sucesso, você e a criatura estão IMPEDIDOS até que o agarrão termine', 'Força 13 ou maior');
 
+/* Definições */
 INSERT INTO definicoes VALUES
 (NULL, 'Tendências', 'Uma criatura tipica do jogo tem uma tendência, o que descreve de forma ampla sua moral e atitudes pessoais. A tendência é a combinação de dois fatores: o primeiro é a moral (bom, mau ou neutro), o segundo define o comportamento perante a sociedade e as leis (leal, caótico ou neutro). Dessas combinações surgem as nove possíveis tendências. \nEsses resumos das nove tendências descrevem o comportamento típico de uma criatura que as tenham. Um indivíduo pode variar significantemente desse comportamento típico, poucas pessoas são perfeitamente e consistentemente fiéis aos preceitos de sua tendência. \nPara muitas criaturas pensantes, a tendência é uma escolha moral. Humanos, anões, elfos e outras raças humanoides podem escolher seguir o caminho do bem ou mau, ordem ou caos. De acordo com as lendas, os deuses de tendência boa, ao criar as raças deram a elas livre arbítrio para escolher seus caminhos morais, sabendo que bondade sem liberdade é escravidão. \nAs divindades malignas que criaram outras raças, por sua vez, fizeram essas para os servir. Essas raças tem forte inclinação inata de cooresponder a natureção de seus deuses. A maioria dos orcs compartilham a natureza violenta e selvagem de seus deuses, tendendo ao mau. Mesmo que um orc escolha uma boa tendência ele lutara contra sua tendência inata por toda a sua vida (Até mesmo os meio-orcs sentem uma leve influencia da tendência do deus dos orcs). \nA tendência é uma parte essencial de criaturas celestiais e demoníacas. Um diabo não escolhe ser leal e mau, e não tende a ser leal e mau, mas sim, é leal e mau em sua essência. Se este deixasse de ser leal e mau, deixaria de ser um diabo. \nA maioria das criaturas não tem capacidade racional, logo não tem tendência, elas são imparciais. Essas criaturas são incapazes de fazer escolhas morais ou éticas e agem de acordo com suas naturezas bestiais. Tubarões são predadores selvagens, por exemplo, mas não são maus, eles só não tem tendência.'),
 (NULL, 'Idiomas', 'Sua raça indica os idiomas que seu personagem consegue falar por padrão, e seu antecedente pode lhe dar acesso a um ou mais idiomas adicionais de sua escolha. Anote esses em sua ficha de personagem. \nEscolha seus idiomas dentre os padrões, ou que sejam comuns em sua campanha. Com a permissão do mestre você pode escolher um idioma exótico ou secreto, como as gírias de ladrão ou druídico. \nAlguns idiomas são, famílias de idiomas com muitos dialetos. Por exemplo, o idioma Primordial iclui os dialetos Auran, Aquan, Ignan e Terran, um para cada um dos quatro planos elementais. Criaturas que falam diferentes dialetos do mesmo idioma podem se comunicar entre si.'),
@@ -136,6 +138,7 @@ INSERT INTO definicoes VALUES
 (NULL, 'Testes de Resistência', 'Um teste de resistência, também chamado de resistnência, representa uma tentativa de resistir a uma magia, armadilha, veneno, doença ou ameaça similar. Normalmente você não decide fazer um teste de resistência, você é forçado a fazer um porque seru personagem ou monstro corre risco de sofrer algum mal. \nPara fazer um teste de resistência, role um d20 e adicione o modificador de atributo apropriado. Por exemplo, você usa o modificador de Destreza para fazer um teste de resistência de Destreza. \nUm teste de resistência pode ser modificado por um bônus ou penalidade situacional e pode ser afetado por vantagem ou desvantagem, conforme determinado pelo Mestre. \nCada classe concede proficiência em ao menos dois testes de resistência. O mago, por exemplo, é proficiente em testes de inteligência e sabedoria. Da mesma forma que proficiência em perícias, proficiência em testes de resistência permite que o personagem adicione o seu bônus de proficiência nos testes de resistência feitos usando um atributo específico. Alguns monstros também tem proficiência em testes de resistência. \nA Classe de Dificuldade do teste de resistência é determinada pelo efeito que o causou. Por exemplo, a CD para um teste de resistência causado por uma magia é determinada pela habilidade de conjuração e bônus de proficiência de quem a conjurou. \nO resultado de um sucesso ou fracasso em um teste de resistência é detalhado no efeito que o causou. Geralmente, um sucesso significa que a criatura não sofre mal ou dano, ou sofre de maneira reduzida, do efeito'),
 (NULL, 'Pontos de Vida', 'O seu modificador de Constituição contribui para os seus pontos de vida. Normalmente, você adiciona o seu modificador de Constituição para cada Dado de Vida que você rolar para seus pontos de vida. \nSe o seu modificador de Constituição mudar, os seus pontos de vida máximos mudam também, como se você tivesse esse novo modificador desde o primeiro nível. Por exemplo, se você aumenta o seu valor de Constituição quando atinge o 4º nível e seu modificador de constituição aumenta de +1 para +2, você ajusta o máximo de pontos de vida como se o modificador sempre tivesse sido +2. Então você adiciona 3 pontos de vida pelos três primeiros níveis, e então, faz a rolagem para os pontos de vida do nível 4 usando o novo modificador. Ou se você está no nível 7 e algum efeito reduz seu valor de constituição de modo que reduza seu modificador em 1, seu máximo de pontos de vida será reduzido em 7.');
 
+/* Regras */
 INSERT INTO regras VALUES
 (NULL, 'Inspiração', 'Inspiração é uma regra que o mestre pode usar para recompensar os jogadores por interpretarem o personagem de acordo com os seus traços de personalidade, ideais, vínculos e defeitos. Ao usar a inspiração, você pode usar seu traço de personalidade para ganhar uma vantagem na negociação com o Príncipe dos Mendigos. Ou inspiração pode permitir que você use o vínculo para com a defesa de sua aldeia natal para sobrepujar o efeito de uma magia sobre você. \nO mestre pode escolher dar inspiração por uma variedade de razões. Tipicamente, o mestre da essa recompensa quando você interpreta de acordo com seus traços de personalidade, cedendo às desvantagens presentes em defeitos e vínculos, ou retrata de outra maneira a verdade do seu personagem. O mestre deve dizer como você pode adquirir inspiração durante o jogo. \nVocê tem ou não tem inspiração, você não pode acumular multiplas inspirações para usar posteriromente. \nQuando você tem inspiração, você pode gasta-la quando você faz uma jogada de ataque, teste de resistência ou de habilidade. Gastar a inspiração te concede vantagem na jogada. \nAdicionalmente, se você tem inspiração, você pode recompensar outro jogador por uma boa interpretação, raciocínio inteligente, ou simplesmente por fazer algo emocionante no jogo. Quando outro personagem faz algo que realmente contribui para a história de maneira divertida e interessante, você pode abrir abrir desistir da sua inspiração para da-la ao outro personagem.'),
 (NULL, 'Escondendo-se', 'O Mestre decide se as circunstâncias são apropriadas para se esconder. Quando você tenta se esconder, faça um teste de Destreza (Furtividade). Até que você seja descoberto ou pare de se esconder, o resultado desse teste é contestado pelo teste de Sabedoria (Percepção) de qualquer criatura que esteja ativamente buscando sinais da sua presença. \nVocê não consegue se esconder de uma criatura que tenha visão clara de você, e você entrega sua posição se fizer barulho, como dar um grito de aviso ou derrubar um vaso. \nUma criatura invisível sempre pode tentar se esconder. Sinais da sua presença ainda podem ser notados, e essa tem que permanecer em silêncio. \nEm combate, a maioria das criaturas ficam alerta a sinais de perigo ao seus arredores, então se você tentar se aproximar da criatura normalmente ela o verá. Entretanto, em certas circunstâncias, o Mestre pode permitir que você continue escondido enquanto se aproxima de uma criatura distraida, permitindo que você ganhe vantagem em um ataque antes que seja visto. \nPercepção passiva: Quando você se esconde, existe a possibilidade que alguém perceba você mesmo se não estiver procurando ativamente. Para determinar se uma criatura te percebe ou não, o Mestre compara o seu teste de Destreza (Furtividade) com o valor de Sabedoria (Percepção) Passivo, que é igual 10 + o modificador de Sabedoria da criatura, juntamente a quaisquer outros bônus ou penalidades. Se a criatura tiver vantagem, adicione 5, para desvantagem subtraia 5. Por exemplo, se um personagem nível 1, com um bônus de proficiência +2) possui uma sabedoria de 15, modificador +2, e proficiência em percepção, ele ou ela tem um valor de Sabdoria (Percepção) Passiva de 14. \nO que você pode ver? Um dos principais fatores para determinar se você pode encontrar uma criatura ou objeto escondido é o quão bem você pode ver na area, que pode estar levemente ou densamente escurecida.'),
@@ -144,8 +147,13 @@ INSERT INTO regras VALUES
 (NULL, 'Armas Improvisadas', 'As vezes os personagens não estão com as suas armas e precisam atacar com o que tiverem ao alcance. Uma arma impovisada inclui qualquer objeto que você possa empunhar com uma ou duas mãos, como vidro quebrado, o pé de uma mesa, uma frigideira, a roda de uma caroça ou um goblin morto. \nGeralmente uma arma improvisada é similar a uma arma de verdade e pode ser tratada como tal. Por exemplo, o pé de uma mesa se assemelha a uma clava. Por opção do Mestre, um personagem proficiente com arma pode usar um objeto similar como se fosse a arma e usar seu bonus de proficiência. \nUm objeto que não se assemelha a uma arma causa 1d4 de dano, o Mestre atribui um tipo de dano apropriado para o objeto. Se um personagem usar uma arma de ataque à distância para fazer um ataque corpo-a-corpo, ou arremessar uma arma corpo-a-corpo que não tenha a prorpiedade de Arremesso, também causará 1d4 de dano. Uma arma de arremesso improvisada tem um alcance normal de 6 metros e um alcance longo de 18 metros'),
 (NULL, 'Armas de Prata', 'Alguns monstros que tem imunidade ou resistência a dano de armas não mágicas são sucetíveis a armas de prata, aventureiros cautelosos investem moedas extras para cobrir suas armas com prata. Você pode cobrir uma arma ou 10 peças de munição por 100 po. Esse custo não representa somente o preço da prata, mas também o tempo e expertise necessários para adicionar a prata à arma sem que a torne menos efetiva.');
 
+/* Propriedades dar armas */
 INSERT INTO propriedadesArmas VALUES
-(NULL, 'Munição', 'Você pode usar uma arma que tenha a propriedade de munição para fazer um ataque a distancia somente se você tem munição para disparar da arma. A cada vez que você atacar com a arma você ira gastar uma munição. Sacar a munição de uma aljava, ou outro recipiente, é parte do ataque, você precisa de uma mão livre para carregar uma arma de uma mão. Ao final do combate você pode gastar um minuto para recuperar metade das munições usadas fazendo uma busca no campo de batalha. \nSe você usar uma arma que tenha a propriedade de munição para fazer um ataque corpo a corpo você a usa como uma arma improvisada, veja sobre armas improvisadas. \nUma funda precisa estar carregada para ser usada desta forma.'),
+(NULL, 'Munição (distância 24/96)', 'Você pode usar uma arma que tenha a propriedade de munição para fazer um ataque a distancia somente se você tem munição para disparar da arma. A cada vez que você atacar com a arma você ira gastar uma munição. Sacar a munição de uma aljava, ou outro recipiente, é parte do ataque, você precisa de uma mão livre para carregar uma arma de uma mão. Ao final do combate você pode gastar um minuto para recuperar metade das munições usadas fazendo uma busca no campo de batalha. \nSe você usar uma arma que tenha a propriedade de munição para fazer um ataque corpo a corpo você a usa como uma arma improvisada, veja sobre armas improvisadas. \nUma funda precisa estar carregada para ser usada desta forma.'),
+(NULL, 'Munição (distância 9/36)', 'Você pode usar uma arma que tenha a propriedade de munição para fazer um ataque a distancia somente se você tem munição para disparar da arma. A cada vez que você atacar com a arma você ira gastar uma munição. Sacar a munição de uma aljava, ou outro recipiente, é parte do ataque, você precisa de uma mão livre para carregar uma arma de uma mão. Ao final do combate você pode gastar um minuto para recuperar metade das munições usadas fazendo uma busca no campo de batalha. \nSe você usar uma arma que tenha a propriedade de munição para fazer um ataque corpo a corpo você a usa como uma arma improvisada, veja sobre armas improvisadas. \nUma funda precisa estar carregada para ser usada desta forma.'),
+(NULL, 'Munição (distância 45/180)', 'Você pode usar uma arma que tenha a propriedade de munição para fazer um ataque a distancia somente se você tem munição para disparar da arma. A cada vez que você atacar com a arma você ira gastar uma munição. Sacar a munição de uma aljava, ou outro recipiente, é parte do ataque, você precisa de uma mão livre para carregar uma arma de uma mão. Ao final do combate você pode gastar um minuto para recuperar metade das munições usadas fazendo uma busca no campo de batalha. \nSe você usar uma arma que tenha a propriedade de munição para fazer um ataque corpo a corpo você a usa como uma arma improvisada, veja sobre armas improvisadas. \nUma funda precisa estar carregada para ser usada desta forma.'),
+(NULL, 'Munição (distância 30/120)', 'Você pode usar uma arma que tenha a propriedade de munição para fazer um ataque a distancia somente se você tem munição para disparar da arma. A cada vez que você atacar com a arma você ira gastar uma munição. Sacar a munição de uma aljava, ou outro recipiente, é parte do ataque, você precisa de uma mão livre para carregar uma arma de uma mão. Ao final do combate você pode gastar um minuto para recuperar metade das munições usadas fazendo uma busca no campo de batalha. \nSe você usar uma arma que tenha a propriedade de munição para fazer um ataque corpo a corpo você a usa como uma arma improvisada, veja sobre armas improvisadas. \nUma funda precisa estar carregada para ser usada desta forma.'),
+(NULL, 'Munição (distância 7,5/30)', 'Você pode usar uma arma que tenha a propriedade de munição para fazer um ataque a distancia somente se você tem munição para disparar da arma. A cada vez que você atacar com a arma você ira gastar uma munição. Sacar a munição de uma aljava, ou outro recipiente, é parte do ataque, você precisa de uma mão livre para carregar uma arma de uma mão. Ao final do combate você pode gastar um minuto para recuperar metade das munições usadas fazendo uma busca no campo de batalha. \nSe você usar uma arma que tenha a propriedade de munição para fazer um ataque corpo a corpo você a usa como uma arma improvisada, veja sobre armas improvisadas. \nUma funda precisa estar carregada para ser usada desta forma.'),
 (NULL, 'Acuidade', 'Quando fazendo um ataque com uma arma que tenha Acuidade, você pode escolher usar seu modificador de Força ou Destreza para fazer as jogadas de ataque e de dano. Você precisa usar o mesmo modificador para ambos.'),
 (NULL, 'Pesada', 'Criaturas pequenas tem desvantagem em jogadas de ataque com armas pesadas. O tamanho e volume de uma arma pesada fazem com que ela seja muito grande para que uma criatura pequena a use eficientemente.'),
 (NULL, 'Leve', 'Uma arma leve é pequena e fácil de manusear, fazendo dessa ideal para uso quando combatendo com duas armas.'),
@@ -153,15 +161,98 @@ INSERT INTO propriedadesArmas VALUES
 (NULL, 'Distância', 'Uma arma que pode ser usada para fazer ataques a distância tem o alcance entre parenteses após propriedade de Munição ou Arremesso. O alcance tem dois números. O primeiro mostra o alcance normal da arma em metros, o segundo indica o longo alcance da arma. Quando atacando um alvo além do alcance normal você tem desvantagem na jogada dee ataque. Você não pode atacar um alvo além do alcance longo da arma.'),
 (NULL, 'Alcance', 'Essa arma adiciona 1,5 metro ao seu alcance quando atacando com ela e também quando determinando seu alcance apra ataques de oportunidade.'),
 (NULL, 'Especial', 'Uma arma com a propriedade Especial tem regras diferentes que regem seu uso. Veja detalhadamente na definição de Armas Especiais.'),
-(NULL, 'Arremesso', 'Se uma arma tem a propriedade de Arremesso você pode arremessar a arma para fazer um ataque a distância. Se a arma for uma arma corpo-a-corpo você usa o mesmo modificador de habilidade para a rolagem de ataque e de dano que você usaria para um ataque corpo-a-corpo com a arma. Por exemplo, se você arremessar uma machadinha você usa o modificador de Força, mas se você aremessar uma adaga você pode usar Força ou Destreza, porque a adaga tem a propriedade de Acuidade.'),
+(NULL, 'Arremesso (distância 6/18)', 'Se uma arma tem a propriedade de Arremesso você pode arremessar a arma para fazer um ataque a distância. Se a arma for uma arma corpo-a-corpo você usa o mesmo modificador de habilidade para a rolagem de ataque e de dano que você usaria para um ataque corpo-a-corpo com a arma. Por exemplo, se você arremessar uma machadinha você usa o modificador de Força, mas se você aremessar uma adaga você pode usar Força ou Destreza, porque a adaga tem a propriedade de Acuidade.'),
+(NULL, 'Arremesso (distância 9/36)', 'Se uma arma tem a propriedade de Arremesso você pode arremessar a arma para fazer um ataque a distância. Se a arma for uma arma corpo-a-corpo você usa o mesmo modificador de habilidade para a rolagem de ataque e de dano que você usaria para um ataque corpo-a-corpo com a arma. Por exemplo, se você arremessar uma machadinha você usa o modificador de Força, mas se você aremessar uma adaga você pode usar Força ou Destreza, porque a adaga tem a propriedade de Acuidade.'),
+(NULL, 'Arremesso (distância 1,5/4,5)', 'Se uma arma tem a propriedade de Arremesso você pode arremessar a arma para fazer um ataque a distância. Se a arma for uma arma corpo-a-corpo você usa o mesmo modificador de habilidade para a rolagem de ataque e de dano que você usaria para um ataque corpo-a-corpo com a arma. Por exemplo, se você arremessar uma machadinha você usa o modificador de Força, mas se você aremessar uma adaga você pode usar Força ou Destreza, porque a adaga tem a propriedade de Acuidade.'),
 (NULL, 'Duas mãos', 'Essa arma requer o uso das duas mãos quando você ataca com a mesma.'),
-(NULL, 'Versátil', 'Essa arma pode ser usada com uma ou duas mãos. Um valor de dano entre parenteses aparece com a propriedade, o dano de quando a arma é usada com as duas mãos para fazer um ataque corpo-a-corpo.');
+(NULL, 'Versátil (1d8)', 'Essa arma pode ser usada com uma ou duas mãos. Um valor de dano entre parenteses aparece com a propriedade, o dano de quando a arma é usada com as duas mãos para fazer um ataque corpo-a-corpo.'),
+(NULL, 'Versátil (1d10)', 'Essa arma pode ser usada com uma ou duas mãos. Um valor de dano entre parenteses aparece com a propriedade, o dano de quando a arma é usada com as duas mãos para fazer um ataque corpo-a-corpo.');
 
+/* Tipos de armas */
 INSERT INTO tiposDeArma VALUES
 (NULL, 'Armas Simples Corpo-a-Corpo'),
 (NULL, 'Armas Simples à Distância'),
 (NULL, 'Armas Marciais Corpo-a-Corpo'),
 (NULL, 'Armas Marciais à Distância');
+
+/* Armas 2 concussao 3 cortante 9 perfurante*/
+INSERT INTO armas VALUES
+/* Armas Simples Corpo-a-Corpo*/
+(NULL, 'Adaga', '2 po', '1d4', 9, '0,5 kg', 1),
+(NULL, 'Azagaia', '5 pp', '1d6', 9, '1 kg', 1),
+(NULL, 'Bordão', '2 pp', '1d6', 2, '2 kg', 1),
+(NULL, 'Clava Grande', '2 pp', '1d8', 2, '5 kg', 1),
+(NULL, 'Foice Curta', '1 po', '1d4', 3, '1 kg', 1),
+(NULL, 'Lança', '1 po', '1d6', 9, '1,5 kg', 1),
+(NULL, 'Maça', '5 po', '1d6', 2, '2 kg', 1),
+(NULL, 'Machadinha', '5 po', '1d6', 3, '1 kg', 1),
+(NULL, 'Martelo Leve', '2 po', '1d4', 2, '1 kg', 1),
+(NULL, 'Porrete', '1 pp', '1d4', 2, '1 kg', 1),
+/* Armas Simples à Distância */
+(NULL, 'Arco Curto', '25 po', '1d6', 9, '1 kg', 2),
+(NULL, 'Besta Leve', '25 po', '1d8', 9, '2,5 kg', 2),
+(NULL, 'Dardo', '5 pc', '1d4', 9, '0,1 kg', 2),
+(NULL, 'Funda', '1 pp', '1d4', 2, '0 kg', 2),
+/* Armas Marciais Corpo-a-Corpo */
+(NULL, 'Alabarda', '20 po', '1d10', 3, '3 kg', 3),
+(NULL, 'Cimitarra', '25 po', '1d6', 3, '1,5 kg', 3),
+(NULL, 'Chicote', '2 po', '1d4', 3, '1,5 kg', 3),
+(NULL, 'Espada Curta', '10 po', '1d6', 9, '1 kg', 3),
+(NULL, 'Espada Grande', '50 po', '2d6', 3, '3 kg', 3),
+(NULL, 'Espada Longa', '15 po', '1d8', 3, '1,5 kg', 3),
+(NULL, 'Glaive', '20 po', '1d10', 3, '3 kg', 3),
+(NULL, 'Lança de Montaria', '10 po', '1d12', 9, '3 kg', 3),
+(NULL, 'Lança Longa', '5 po', '1d10', 9, '4 kg', 3),
+(NULL, 'Maça Estrela', '15 po', '1d8', 9, '2 kg', 3),
+(NULL, 'Machado Grande', '30 po', '1d12', 3, '3,5 kg', 3),
+(NULL, 'Machado de Batalha', '10 po', '1d8', 3, '2 kg', 3),
+(NULL, 'Malho', '10 po', '2d6', 2, '5 kg', 3),
+(NULL, 'Mangual', '10 po', '1d8', 2, '1 kg', 3),
+(NULL, 'Martelo de Guerra', '15 po', ' 1d8', 2, '1 kg', 3),
+(NULL, 'Picareta de Guerra', '5 po', '1d8', 9, '1 kg', 3),
+(NULL, 'Rapieira', '25 po', '1d8', 9, '1 kg', 3),
+(NULL, 'Tridente', '5 po', '1d6', 9, '2 kg', 3),
+/* Armas Marciais à Distância */
+(NULL, 'Arco Longo', '50 po', '1d8', 9, '1 kg', 4),
+(NULL, 'Besta de Mão', '75 po', '1d6', 9, '1,5 kg', 4),
+(NULL, 'Besta Pesada', '50 po', '1d10', 9, '4,5 kg', 4),
+(NULL, 'Rede', '1 po', '0', NULL, '1,5 kg', 4),
+(NULL, 'Zarabatana', '10 po', '1', 9, '0,5 kg', 4);
+
+INSERT INTO propriedadesArmas_armas VALUES
+(1, 6), (1, 8), (1, 13),
+(2, 14),
+(3, 17),
+(4, 7), (4, 16),
+(5, 8),
+(6, 13), (6, 17),
+(8, 8), (8, 13),
+(9, 8), (9, 13),
+(10, 8),
+(11, 1), (11, 16),
+(12, 1), (12, 9), (12, 16),
+(13, 6), (13, 13),
+(14, 2),
+(15, 7), (15, 11), (15, 16),
+(16, 6), (16, 8),
+(17, 6), (17, 11),
+(18, 6), (18, 8),
+(19, 7), (19, 16),
+(20, 18),
+(21, 7), (21, 11), (21, 16),
+(22, 11), (22, 12),
+(23, 7), (23, 11), (23, 16),
+(25, 7), (25, 16),
+(26, 18),
+(27, 7), (27, 16),
+(29, 18),
+(31, 6), 
+(32, 13), (32, 17),
+(33, 3), (33, 7), (33, 16),
+(34, 2), (34, 8), (34, 9),
+(35, 4), (35, 7), (35, 9), (35, 16),
+(36, 12), (36, 15),
+(37, 5), (37, 9);
 
 INSERT INTO criaturas VALUES
 (NULL, 'Griffin', 'humanoide'),
@@ -184,5 +275,7 @@ SELECT * FROM talentos;
 SELECT * from definicoes;
 SELECT * FROM regras;
 SELECT * FROM propriedadesArmas;
-SELECT * FROM criaturas;
 SELECT * FROM tiposDeArma;
+SELECT * FROM armas;
+SELECT * FROM propriedadesArmas_armas;
+SELECT * FROM criaturas;
