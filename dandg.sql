@@ -94,7 +94,7 @@ CREATE TABLE regras (
 
 CREATE TABLE propriedadesArmas (
 	idPropriedadeArma INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nomePorpriedadeArma VARCHAR(25),
+    nomePorpriedadeArma VARCHAR(50),
     descricaoPropriedadeArma VARCHAR(1250)
 );
 
@@ -116,9 +116,9 @@ CREATE TABLE armas (
 );
 
 CREATE TABLE propriedadesArmas_armas (
-	fkPropriedadeArma INT NOT NULL,
-    fkArma INT NOT NULL,
-    FOREIGN KEY (fkUsuario) REFERENCES usuarios(idUsuario),
+	fkArma INT NOT NULL,
+    fkPropriedadeArma INT NOT NULL,
+    FOREIGN KEY (fkArma) REFERENCES armas(idArma),
     FOREIGN KEY (fkPropriedadeArma) REFERENCES propriedadesArmas(idPropriedadeArma)
 );
 

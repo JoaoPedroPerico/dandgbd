@@ -175,7 +175,7 @@ INSERT INTO tiposDeArma VALUES
 (NULL, 'Armas Marciais Corpo-a-Corpo'),
 (NULL, 'Armas Marciais à Distância');
 
-/* Armas 2 concussao 3 cortante 9 perfurante*/
+/* Armas */
 INSERT INTO armas VALUES
 /* Armas Simples Corpo-a-Corpo*/
 (NULL, 'Adaga', '2 po', '1d4', 9, '0,5 kg', 1),
@@ -219,6 +219,7 @@ INSERT INTO armas VALUES
 (NULL, 'Rede', '1 po', '0', NULL, '1,5 kg', 4),
 (NULL, 'Zarabatana', '10 po', '1', 9, '0,5 kg', 4);
 
+/* Propriedades dar armas */
 INSERT INTO propriedadesArmas_armas VALUES
 (1, 6), (1, 8), (1, 13),
 (2, 14),
