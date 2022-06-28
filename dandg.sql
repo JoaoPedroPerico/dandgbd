@@ -80,16 +80,10 @@ CREATE TABLE talentos (
     preReqTalento VARCHAR(250)
 );
 
-CREATE TABLE definicoes (
-	idDefinicao INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nomeDefinicao VARCHAR(25),
-    descricaoDefinicao VARCHAR(2250)
-);
-
-CREATE TABLE regras (
-	idRegra INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nomeRegra VARCHAR(25),
-    descricaoRegra VARCHAR(2250)
+CREATE TABLE definicoesERegras (
+	idDefReg INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nomeDefReg VARCHAR(50),
+    descricaoDefReg VARCHAR(2250)
 );
 
 CREATE TABLE propriedadesArmas (
