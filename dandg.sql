@@ -110,8 +110,8 @@ CREATE TABLE armas (
     danoArma VARCHAR(25),
     fkTipoDeDano INT,
     pesoArma VARCHAR(10),
-    fkTiposDeArma INT,
-    FOREIGN KEY (fkTiposDeArma) REFERENCES tiposDeArma(idTipoDeArma),
+    fkTipoDeArma INT,
+    FOREIGN KEY (fkTipoDeArma) REFERENCES tiposDeArma(idTipoDeArma),
     FOREIGN KEY (fkTipoDeDano) REFERENCES tiposDeDano(idTipoDeDano)
 );
 
@@ -120,6 +120,12 @@ CREATE TABLE propriedadesArmas_armas (
     fkPropriedadeArma INT NOT NULL,
     FOREIGN KEY (fkArma) REFERENCES armas(idArma),
     FOREIGN KEY (fkPropriedadeArma) REFERENCES propriedadesArmas(idPropriedadeArma)
+);
+
+CREATE TABLE categoriasDeTamanho (
+	idCategoriaDeTamanho INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	tamanho VARCHAR(20),
+    espaco VARCHAR(20)
 );
 
 CREATE TABLE criaturas (
