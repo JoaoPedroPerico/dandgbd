@@ -122,6 +122,18 @@ CREATE TABLE categoriasDeTamanho (
     espaco VARCHAR(20)
 );
 
+CREATE TABLE tiposDeCriaturas (
+	idTipoDeCriatura INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR(20),
+    descricao VARCHAR(500)
+);
+
+CREATE TABLE nivelDeDesafio (
+	idNivelDeDesafio INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nivel VARCHAR(3),
+    experiencia INT
+);
+
 CREATE TABLE criaturas (
 	idCriatura INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeCriatura VARCHAR(50),

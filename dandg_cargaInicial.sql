@@ -264,6 +264,59 @@ INSERT INTO categoriasDeTamanho VALUES
 (NULL, 'Enorme', '4,5m x 4,5m'),
 (NULL, 'Gigantesco', '6m x 6m ou maior');
 
+INSERT INTO tiposDeCriatura VALUES
+(NULL, 'Aberração', 'As aberrações são seres totalmente estranhos. Muitos deles tem hbilidades mágicas inatas extraídas da mente alienígena da criatura ao invés das forças místicas do mundo. As principais aberrações são os aboletes(aboleths), devoradores de mentes, observadores(beholders) e os slaads(slaadi)'),
+(NULL, 'Besta', 'Bestas são criaturas não humanóides que fazem parte da natureza da ecologia fantástica. Algumas delas tem poderes mágicos, a maioria não é inteligênte e carece de sociedade ou idioma. Bestas incluem dinossauros, todas as variedades de animais e versões gigantes desses animais.'),
+(NULL, 'Celestial', 'Celestiais são criaturas nativas dos Planos Superiores. Muitas delas são servos de deidades, encarregados como mensageiros ou agentes no mundo mortal e através dos planos. Celestiais são bons por natureza, sendo excessões os celestiais que se desviam da tendência boa, terríveis raridades. Celestiais incluem anjos, couatls e pégasos.'),
+(NULL, 'Constructo', 'Constructos são feitos, e não nascido. Alguns deles são programasdos pelos seus criadores para seguir um conjunto simples de instruções, enquanto outros são imbuídos com senciência e capazes de pensamentos proprios. Golens são constructos icônicos. Muitas criaturas nativas do plano exterior Mecânus, como os modrons, são constructos formados a partir da matéria prima do próprio plano pela vontade de criaturas mais poderosas.'),
+(NULL, 'Corruptor', 'Corruptores são criaturas perversas nativas dos Planos Inferiores. Algumas são servas de deidades, mas a maioria trabalha sob a liderança de arquidiabos e príncipes demônios. Sacerdotes e magos as vezes invocam corruptores para o mundo material para fazer seus pactos. Se um celestial maligno é uma raridade, um bom corruptor é ainda mais inconcebível. Corruptores incluem demônios, diabos, cães infernais, rakshasas e yugoloths.'),
+(NULL, 'Dragão', 'Dragões são grandes criaturas reptilianas de origem antiga e teremendo poder. Draões verdadeiros, incluindo os bons dragões metálicos e os malignos dragões cromáticos, são altamente inteligentes e possuem magia inata. Também nessa categoria estão criaturas de relação distante aos dragões verdadeiros, menos poderosas, menos inteligentes e menos mágicas, como os wyverns e os pseudodragões.'),
+(NULL, 'Elemental', 'Elementais são criaturas nativas dos planos elementais. Algumas criaturas desse tipo são pouco a mais que massas animadas de seus respectivos elementos, incluindo as criaturas chamadas simplesmente de elementais. Outras possuem forma biológica infundida com a energia elemental. As raças de gênios, incluindo djinn e efreet, formam as civilizações mais importantes dos planos elementais. Outros elementais incluem azers e caçadores invisíveis.'),
+(NULL, 'Fada', 'Fadas são criaturas mágicas intimamente ligadas às forças da natureza. Eles moram em bosques crepusculares e florestas enevoadas. Em alguns mundos, eles estão intimamente ligados a Faéria, também chamado de Plano das Fadas. Alguns também são encontrados nos Planos Exteriores, particularmente nos planos de Arbórea e Terras Selvagens. As fadas incluem dríades, pixies e sátiros.'),
+(NULL, 'Gigante', 'Gigantes se erguem sobre humanos e seus similares. Eles tem forma humanoide, apesar de alguns terem múltiplas cabeças (ettins) ou deformidades (fomoris). As seis variações de gigantes verdadeiros são gigantes das colinas, gigantes de pedra, gigantes do gelo, gigantes do fogo, gigantes das nuvens e gigantes da tempestade. Além destes, criaturas como ogros e trolls são gigantes.'),
+(NULL, 'Humanoide', 'Os humanóides são os principais povos de um mundo de jogos de fantasia, civilizados e selvagens, incluindo humanos e uma tremenda variedade de outras espécies. Eles têm linguagem e cultura, poucas ou nenhuma habilidade mágica inata, embora a maioria dos humanóides possa aprender a lançar feitiços, e uma forma bípede. As raças humanóides mais comuns são as mais adequadas como personagens dos jogadores: humanos, anões, elfos e halflings. Quase tão numerosos quanto, mas muito mais selvagens e brutais, e quase uniformemente más, são as raças de goblinóides, goblins, hobgoblins e bugbears, além dos orcs, gnolls, povo lagarto e kobolds.'),
+(NULL, 'Monstruosidade', 'Monstruosidades são monstros no sentido, criaturas assustadoras que não são comuns, não são verdadeiramente naturais e quase nunca são benignas. Alguns são resultados de experimentos mágicos que deram errado, como ursos-coruja, e outros são o produto de maldições terríveis, incluindo minotauros e yuan-ti. Eles desafiam a categorização e, de certa forma, servem como uma categoria abrangente para criaturas que não se encaixam em nenhum outro tipo.'),
+(NULL, 'Morto-Vivo', 'Mortos-vivos já foram criaturas vivas trazidas a um estado terrível de morte-vida através da prática de magia necromântica ou alguma maldição progana. Mortos-vivos incluem corpos ambulantes, como vampiros e zumbis, e espíritos desencarnados, como fantasmas e espectros.'),
+(NULL, 'Limos', 'Limos são criaturas gelatinosas que raramente têm uma forma fixa. Eles são principalmente subterrâneos, morando em cavernas e masmorras e se alimentando de lixo, carniça ou criaturas azaradas o suficiente para entrar em seu caminho. Pudins negros e cubos gelatinosos estão entre os limos mais reconhecíveis.'),
+(NULL, 'Planta', 'As plantas neste contexto são criaturas vegetais, não flora comum. A maioria deles é ambulatorial, e alguns são carnívoros. As plantas mais reconhecíveis são o arbusto errante e a ente. Criaturas fúngicas, como o esporo de gás e o miconide, também se enquadram nessa categoria.');
+
+INSERT INTO nivelDeDesafio VALUES
+(NULL, '0', 0),
+(NULL, '0', 10),
+(NULL, '1/8', 25),
+(NULL, '1/4', 50),
+(NULL, '1/2', 100),
+(NULL, '1', 200),
+(NULL, '2', 450),
+(NULL, '3', 700),
+(NULL, '4', 1100),
+(NULL, '5', 1800),
+(NULL, '6', 2300),
+(NULL, '7', 2900),
+(NULL, '8', 3900),
+(NULL, '9', 5000),
+(NULL, '10', 5900),
+(NULL, '11', 7200),
+(NULL, '12', 8400),
+(NULL, '13', 10000),
+(NULL, '14', 11500),
+(NULL, '15', 13000),
+(NULL, '16', 15000),
+(NULL, '17', 18000),
+(NULL, '18', 20000),
+(NULL, '19', 22000),
+(NULL, '20', 25000),
+(NULL, '21', 33000),
+(NULL, '22', 41000),
+(NULL, '23', 50000),
+(NULL, '24', 62000),
+(NULL, '25', 75000),
+(NULL, '26', 90000),
+(NULL, '27', 105000),
+(NULL, '28', 120000),
+(NULL, '29', 135000),
+(NULL, '30', 155000);
+
 INSERT INTO criaturas VALUES
 (NULL, 'Griffin', 'humanoide'),
 (NULL, 'Jessie', 'humanoide'),
@@ -287,4 +340,5 @@ SELECT * FROM propriedadesArmas;
 SELECT * FROM tiposDeArma;
 SELECT * FROM armas;
 SELECT * FROM propriedadesArmas_armas;
+SELECT * FROM tiposDeCriatura;
 SELECT * FROM criaturas;
