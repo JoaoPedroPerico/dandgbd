@@ -134,6 +134,13 @@ CREATE TABLE nivelDeDesafio (
     experiencia INT
 );
 
+CREATE TABLE bonusDeProficienciaPorND (
+	idBonusDeProficienciaPorND INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	fkNivelDeDesafio INT NOT NULL,
+    bonus INT,
+    FOREIGN KEY (fkNivelDeDesafio) REFERENCES nivelDeDesafio(idNivelDeDesafio)
+);
+
 CREATE TABLE criaturas (
 	idCriatura INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nomeCriatura VARCHAR(50),
