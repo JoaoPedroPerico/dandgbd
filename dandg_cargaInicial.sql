@@ -264,7 +264,7 @@ INSERT INTO categoriasDeTamanho VALUES
 (NULL, 'Enorme', '4,5m x 4,5m'),
 (NULL, 'Gigantesco', '6m x 6m ou maior');
 
-INSERT INTO tiposDeCriatura VALUES
+INSERT INTO tiposDeCriaturas VALUES
 (NULL, 'Aberração', 'As aberrações são seres totalmente estranhos. Muitos deles tem hbilidades mágicas inatas extraídas da mente alienígena da criatura ao invés das forças místicas do mundo. As principais aberrações são os aboletes(aboleths), devoradores de mentes, observadores(beholders) e os slaads(slaadi)'),
 (NULL, 'Besta', 'Bestas são criaturas não humanóides que fazem parte da natureza da ecologia fantástica. Algumas delas tem poderes mágicos, a maioria não é inteligênte e carece de sociedade ou idioma. Bestas incluem dinossauros, todas as variedades de animais e versões gigantes desses animais.'),
 (NULL, 'Celestial', 'Celestiais são criaturas nativas dos Planos Superiores. Muitas delas são servos de deidades, encarregados como mensageiros ou agentes no mundo mortal e através dos planos. Celestiais são bons por natureza, sendo excessões os celestiais que se desviam da tendência boa, terríveis raridades. Celestiais incluem anjos, couatls e pégasos.'),
@@ -280,7 +280,7 @@ INSERT INTO tiposDeCriatura VALUES
 (NULL, 'Limos', 'Limos são criaturas gelatinosas que raramente têm uma forma fixa. Eles são principalmente subterrâneos, morando em cavernas e masmorras e se alimentando de lixo, carniça ou criaturas azaradas o suficiente para entrar em seu caminho. Pudins negros e cubos gelatinosos estão entre os limos mais reconhecíveis.'),
 (NULL, 'Planta', 'As plantas neste contexto são criaturas vegetais, não flora comum. A maioria deles é ambulatorial, e alguns são carnívoros. As plantas mais reconhecíveis são o arbusto errante e a ente. Criaturas fúngicas, como o esporo de gás e o miconide, também se enquadram nessa categoria.');
 
-INSERT INTO nivelDeDesafio VALUES
+INSERT INTO niveisDeDesafio VALUES
 (NULL, '0', 0),
 (NULL, '0', 10),
 (NULL, '1/8', 25),
@@ -354,12 +354,8 @@ INSERT INTO bonusDeProficienciaPorND VALUES
 (NULL, '33', 9),
 (NULL, '34', 9);
 
-INSERT INTO criaturas VALUES
-(NULL, 'Griffin', 'humanoide'),
-(NULL, 'Jessie', 'humanoide'),
-(NULL, 'Choncc', 'monstro'),
-(NULL, 'Kleber', 'humanoide'),
-(NULL, 'Guaxi', 'besta');
+INSERT INTO criaturas(idCriatura, nomeCriatura, fkTipoDeCriatura, tipoDeCriaturaExtra, fkCategoriaDeTamanho, fkTendencia, classeDeArmadura, tipoDeArmadura, pontosDeVida, formulaVida, deslocamento, deslocamentoEscavando, deslocamentoEscalada, deslocamentoVoo, deslocamentoNado, forca, forcaModificador, destreza, destrezaModificador, constituicao, constituicaoModificador, inteligencia, inteligenciaModificador, sabedoria, sabedoriaModificador, carisma, carismaModificador, fkNivelDeDesafio, fkBonusDeProficienciaPorND, vulnerabilidades, resistenciasDano, imunidadesDano, imunidadesCondicao, sentidos, idiomas, pericias, tracosEspeciais, acoes, ataquesMultiplos, reacoes, equipamento, acoesLendarias, acoesDeCovil, efeitosRegionais) VALUES
+(NULL, 'Coruja', 2, NULL, 1, 10, 11, NULL, 1, '1d4-1', '1.5', NULL, NULL, '18', NULL, 3, -3, 13, 1, 8, -1, 2, -4, 14, 2, 7, -2, 2, 2, NULL, NULL, NULL, NULL, 'Visão no escuro 36 m, Percepção passiva 14', NULL, 'Furtividade +3, Percepcao +4', 'Sobrevoo, Visao aguçada', 'Garras', NULL, NULL, NULL, NULL, NULL, NULL);
 
 SELECT * FROM usuarios;
 SELECT * FROM roles;
@@ -377,5 +373,7 @@ SELECT * FROM propriedadesArmas;
 SELECT * FROM tiposDeArma;
 SELECT * FROM armas;
 SELECT * FROM propriedadesArmas_armas;
-SELECT * FROM tiposDeCriatura;
+SELECT * FROM tiposDeCriaturas;
+SELECT * FROM niveisDeDesafio;
+SELECT * FROM bonusDeProficienciaPorND;
 SELECT * FROM criaturas;

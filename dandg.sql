@@ -125,10 +125,10 @@ CREATE TABLE categoriasDeTamanho (
 CREATE TABLE tiposDeCriaturas (
 	idTipoDeCriatura INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(20),
-    descricao VARCHAR(500)
+    descricao VARCHAR(5000)
 );
 
-CREATE TABLE nivelDeDesafio (
+CREATE TABLE niveisDeDesafio (
 	idNivelDeDesafio INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nivel VARCHAR(3),
     experiencia INT
@@ -138,12 +138,58 @@ CREATE TABLE bonusDeProficienciaPorND (
 	idBonusDeProficienciaPorND INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	fkNivelDeDesafio INT NOT NULL,
     bonus INT,
-    FOREIGN KEY (fkNivelDeDesafio) REFERENCES nivelDeDesafio(idNivelDeDesafio)
+    FOREIGN KEY (fkNivelDeDesafio) REFERENCES niveisDeDesafio(idNivelDeDesafio)
 );
 
 CREATE TABLE criaturas (
 	idCriatura INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nomeCriatura VARCHAR(50),
-    tipoCriatura VARCHAR(25)
+    nomeCriatura VARCHAR(50) NOT NULL,
+    fkTipoDeCriatura INT NOT NULL,
+    tipoDeCriaturaExtra VARCHAR(25),
+    fkCategoriaDeTamanho INT NOT NULL,
+    fkTendencia INT NOT NULL,
+    classeDeArmadura INT NOT NULL,
+    tipoDeArmadura VARCHAR(25),
+    pontosDeVida INT NOT NULL,
+    formulaVida VARCHAR(25) NOT NULL,
+    deslocamento FLOAT NOT NULL,
+    deslocamentoEscavando FLOAT,
+    deslocamentoEscalada FLOAT,
+    deslocamentoVoo FLOAT,
+    deslocamentoNado FLOAT,
+    forca INT NOT NULL,
+    forcaModificador INT NOT NULL,
+    destreza INT NOT NULL,
+    destrezaModificador INT NOT NULL,
+    constituicao INT NOT NULL,
+    constituicaoModificador INT NOT NULL,
+    inteligencia INT NOT NULL,
+    inteligenciaModificador INT NOT NULL,
+    sabedoria INT NOT NULL,
+    sabedoriaModificador INT NOT NULL,
+    carisma INT NOT NULL,
+    carismaModificador INT NOT NULL,
+    fkNivelDeDesafio INT NOT NULL,
+    fkBonusDeProficienciaPorND INT NOT NULL,
+    vulnerabilidades VARCHAR(50),
+    resistenciasDano VARCHAR(50),
+    imunidadesDano VARCHAR(50),
+    imunidadesCondicao VARCHAR(50),
+    sentidos VARCHAR(50),
+    idiomas VARCHAR(50),
+    pericias VARCHAR(50),
+    tracosEspeciais VARCHAR(50),
+    acoes VARCHAR(50),
+    ataquesMultiplos VARCHAR(50),
+    reacoes VARCHAR(50),
+    equipamento VARCHAR(50),
+    acoesLendarias VARCHAR(50),
+    acoesDeCovil VARCHAR(50),
+    efeitosRegionais VARCHAR(50),
+    FOREIGN KEY (fkTipoDeCriatura) REFERENCES tiposDeCriaturas(idTipoDeCriatura),
+    FOREIGN KEY (fkCategoriaDeTamanho) REFERENCES categoriasDeTamanho(idCategoriaDeTamanho),
+    FOREIGN KEY (fkTendencia) REFERENCES tendencias(idTendencia),
+    FOREIGN KEY (fkNivelDeDesafio) REFERENCES niveisDeDesafio(idNivelDeDesafio),
+    FOREIGN KEY (fkBonusDeProficienciaPorND) REFERENCES bonusDeProficienciaPorND(idBonusDeProficienciaPorND)
 );
 
