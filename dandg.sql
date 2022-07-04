@@ -178,8 +178,6 @@ CREATE TABLE criaturas (
     sentidos VARCHAR(50),
     idiomas VARCHAR(50),
     pericias VARCHAR(50),
-    tracosEspeciais VARCHAR(50),
-    acoes VARCHAR(50),
     ataquesMultiplos VARCHAR(50),
     reacoes VARCHAR(50),
     equipamento VARCHAR(50),
@@ -192,4 +190,22 @@ CREATE TABLE criaturas (
     FOREIGN KEY (fkNivelDeDesafio) REFERENCES niveisDeDesafio(idNivelDeDesafio),
     FOREIGN KEY (fkBonusDeProficienciaPorND) REFERENCES bonusDeProficienciaPorND(idBonusDeProficienciaPorND)
 );
+
+CREATE TABLE tracosEspeciaisCriaturas (
+	idTracoEspecial INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nomeTraco VARCHAR(50),
+    descricaoTraco VARCHAR(500),
+    fkIdCriatura INT,
+    FOREIGN KEY (fkIdCriatura) REFERENCES criaturas(idCriatura)
+);
+
+CREATE TABLE acoesCriaturas (
+	idAcaoCriatura INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nomeAcao VARCHAR(50),
+    descricaoAcao VARCHAR(500),
+    fkIdCriatura INT,
+    FOREIGN KEY (fkIdCriatura) REFERENCES criaturas(idCriatura)
+);
+
+
 

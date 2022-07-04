@@ -354,9 +354,17 @@ INSERT INTO bonusDeProficienciaPorND VALUES
 (NULL, '33', 9),
 (NULL, '34', 9);
 
-INSERT INTO criaturas(idCriatura, nomeCriatura, fkTipoDeCriatura, tipoDeCriaturaExtra, fkCategoriaDeTamanho, fkTendencia, classeDeArmadura, tipoDeArmadura, pontosDeVida, formulaVida, deslocamento, deslocamentoEscavando, deslocamentoEscalada, deslocamentoVoo, deslocamentoNado, forca, forcaModificador, destreza, destrezaModificador, constituicao, constituicaoModificador, inteligencia, inteligenciaModificador, sabedoria, sabedoriaModificador, carisma, carismaModificador, fkNivelDeDesafio, fkBonusDeProficienciaPorND, vulnerabilidades, resistenciasDano, imunidadesDano, imunidadesCondicao, sentidos, idiomas, pericias, tracosEspeciais, acoes, ataquesMultiplos, reacoes, equipamento, acoesLendarias, acoesDeCovil, efeitosRegionais) VALUES
-(NULL, 'Coruja', 2, NULL, 1, 10, 11, NULL, 1, '1d4-1', '1.5', NULL, NULL, '18', NULL, 3, -3, 13, 1, 8, -1, 2, -4, 14, 2, 7, -2, 2, 2, NULL, NULL, NULL, NULL, 'Visão no escuro 36 m, Percepção passiva 14', NULL, 'Furtividade +3, Percepcao +4', 'Sobrevoo, Visao aguçada', 'Garras', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO criaturas(idCriatura, nomeCriatura, fkTipoDeCriatura, tipoDeCriaturaExtra, fkCategoriaDeTamanho, fkTendencia, classeDeArmadura, tipoDeArmadura, pontosDeVida, formulaVida, deslocamento, deslocamentoEscavando, deslocamentoEscalada, deslocamentoVoo, deslocamentoNado, forca, forcaModificador, destreza, destrezaModificador, constituicao, constituicaoModificador, inteligencia, inteligenciaModificador, sabedoria, sabedoriaModificador, carisma, carismaModificador, fkNivelDeDesafio, fkBonusDeProficienciaPorND, vulnerabilidades, resistenciasDano, imunidadesDano, imunidadesCondicao, sentidos, idiomas, pericias, ataquesMultiplos, reacoes, equipamento, acoesLendarias, acoesDeCovil, efeitosRegionais) VALUES
+(NULL, 'Coruja', 2, NULL, 1, 10, 11, NULL, 1, '1d4-1', '1.5', NULL, NULL, '18', NULL, 3, -3, 13, 1, 8, -1, 2, -4, 14, 2, 7, -2, 2, 2, NULL, NULL, NULL, NULL, 'Visão no escuro 36 m, Percepção passiva 14', NULL, 'Furtividade +3, Percepcao +4', NULL, NULL, NULL, NULL, NULL, NULL);
 
+INSERT INTO tracosEspeciaisCriaturas VALUES
+(NULL, 'Sobrevoo', 'A coruja não provoca ataque de oportunidade quando ela voa para fora do alcance de um inimigo.', 1),
+(NULL, 'Visão e audição aguçados', 'A coruja tem vantagem em testes de Sabedoria (Percepção) relacionados à visão ou audição', 1);
+
+INSERT INTO acoesCriaturas VALUES
+(NULL, 'Garras', 'Ataque corpo-a-corpo com arma: +3 para atingir, alcance 1,5m, um alvo. Acerto 1 de dano cortante.', 1);
+
+/*
 SELECT * FROM usuarios;
 SELECT * FROM roles;
 SELECT * FROM usuarios_roles;
@@ -377,3 +385,6 @@ SELECT * FROM tiposDeCriaturas;
 SELECT * FROM niveisDeDesafio;
 SELECT * FROM bonusDeProficienciaPorND;
 SELECT * FROM criaturas;
+SELECT * FROM tracosEspeciaisCriaturas;
+SELECT * FROM acoesCriaturas;
+*/
