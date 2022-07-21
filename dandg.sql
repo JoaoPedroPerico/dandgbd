@@ -88,7 +88,7 @@ CREATE TABLE definicoesERegras (
 
 CREATE TABLE propriedadesArmas (
 	idPropriedadeArma INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nomePorpriedadeArma VARCHAR(50),
+    nomePropriedadeArma VARCHAR(50),
     descricaoPropriedadeArma VARCHAR(1250)
 );
 
@@ -175,13 +175,12 @@ CREATE TABLE criaturas (
     resistenciasDano VARCHAR(50),
     imunidadesDano VARCHAR(50),
     imunidadesCondicao VARCHAR(50),
-    sentidos VARCHAR(50),
+    sentidos VARCHAR(500),
     idiomas VARCHAR(50),
     pericias VARCHAR(50),
-    ataquesMultiplos VARCHAR(50),
     reacoes VARCHAR(50),
     equipamento VARCHAR(50),
-    acoesLendarias VARCHAR(50),
+    acoesLendarias VARCHAR(500),
     acoesDeCovil VARCHAR(50),
     efeitosRegionais VARCHAR(50),
     FOREIGN KEY (fkTipoDeCriatura) REFERENCES tiposDeCriaturas(idTipoDeCriatura),
@@ -202,7 +201,15 @@ CREATE TABLE tracosEspeciaisCriaturas (
 CREATE TABLE acoesCriaturas (
 	idAcaoCriatura INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nomeAcao VARCHAR(50),
-    descricaoAcao VARCHAR(500),
+    descricaoAcao VARCHAR(1000),
+    fkIdCriatura INT,
+    FOREIGN KEY (fkIdCriatura) REFERENCES criaturas(idCriatura)
+);
+
+CREATE TABLE acoesLendariasCriaturas (
+	idAcaoLendariaCriatura INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	nomeAcaoLendaria VARCHAR(50),
+    descricaoAcaoLendaria VARCHAR(500),
     fkIdCriatura INT,
     FOREIGN KEY (fkIdCriatura) REFERENCES criaturas(idCriatura)
 );

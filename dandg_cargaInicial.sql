@@ -256,6 +256,7 @@ INSERT INTO propriedadesArmas_armas VALUES
 (36, 12), (36, 15),
 (37, 5), (37, 9);
 
+/* Categorias de tamanho */
 INSERT INTO categoriasDeTamanho VALUES
 (NULL, 'Minúsculo', '0,75m x 0,75m'),
 (NULL, 'Pequeno', '1,5m x 1,5m'),
@@ -264,6 +265,7 @@ INSERT INTO categoriasDeTamanho VALUES
 (NULL, 'Enorme', '4,5m x 4,5m'),
 (NULL, 'Gigantesco', '6m x 6m ou maior');
 
+/* Tipos de criaturas */
 INSERT INTO tiposDeCriaturas VALUES
 (NULL, 'Aberração', 'As aberrações são seres totalmente estranhos. Muitos deles tem hbilidades mágicas inatas extraídas da mente alienígena da criatura ao invés das forças místicas do mundo. As principais aberrações são os aboletes(aboleths), devoradores de mentes, observadores(beholders) e os slaads(slaadi)'),
 (NULL, 'Besta', 'Bestas são criaturas não humanóides que fazem parte da natureza da ecologia fantástica. Algumas delas tem poderes mágicos, a maioria não é inteligênte e carece de sociedade ou idioma. Bestas incluem dinossauros, todas as variedades de animais e versões gigantes desses animais.'),
@@ -280,6 +282,7 @@ INSERT INTO tiposDeCriaturas VALUES
 (NULL, 'Limos', 'Limos são criaturas gelatinosas que raramente têm uma forma fixa. Eles são principalmente subterrâneos, morando em cavernas e masmorras e se alimentando de lixo, carniça ou criaturas azaradas o suficiente para entrar em seu caminho. Pudins negros e cubos gelatinosos estão entre os limos mais reconhecíveis.'),
 (NULL, 'Planta', 'As plantas neste contexto são criaturas vegetais, não flora comum. A maioria deles é ambulatorial, e alguns são carnívoros. As plantas mais reconhecíveis são o arbusto errante e a ente. Criaturas fúngicas, como o esporo de gás e o miconide, também se enquadram nessa categoria.');
 
+/* Níveis de desafio */
 INSERT INTO niveisDeDesafio VALUES
 (NULL, '0', 0),
 (NULL, '0', 10),
@@ -317,6 +320,7 @@ INSERT INTO niveisDeDesafio VALUES
 (NULL, '29', 135000),
 (NULL, '30', 155000);
 
+/* Bonus de proficiência por nível de desafio */
 INSERT INTO bonusDeProficienciaPorND VALUES
 (NULL, '1', 2),
 (NULL, '1', 2),
@@ -354,15 +358,37 @@ INSERT INTO bonusDeProficienciaPorND VALUES
 (NULL, '33', 9),
 (NULL, '34', 9);
 
-INSERT INTO criaturas(idCriatura, nomeCriatura, fkTipoDeCriatura, tipoDeCriaturaExtra, fkCategoriaDeTamanho, fkTendencia, classeDeArmadura, tipoDeArmadura, pontosDeVida, formulaVida, deslocamento, deslocamentoEscavando, deslocamentoEscalada, deslocamentoVoo, deslocamentoNado, forca, forcaModificador, destreza, destrezaModificador, constituicao, constituicaoModificador, inteligencia, inteligenciaModificador, sabedoria, sabedoriaModificador, carisma, carismaModificador, fkNivelDeDesafio, fkBonusDeProficienciaPorND, vulnerabilidades, resistenciasDano, imunidadesDano, imunidadesCondicao, sentidos, idiomas, pericias, ataquesMultiplos, reacoes, equipamento, acoesLendarias, acoesDeCovil, efeitosRegionais) VALUES
-(NULL, 'Coruja', 2, NULL, 1, 10, 11, NULL, 1, '1d4-1', '1.5', NULL, NULL, '18', NULL, 3, -3, 13, 1, 8, -1, 2, -4, 14, 2, 7, -2, 2, 2, NULL, NULL, NULL, NULL, 'Visão no escuro 36 m, Percepção passiva 14', NULL, 'Furtividade +3, Percepcao +4', NULL, NULL, NULL, NULL, NULL, NULL);
+/* Criaturas */
+INSERT INTO criaturas(idCriatura, nomeCriatura, fkTipoDeCriatura, tipoDeCriaturaExtra, fkCategoriaDeTamanho, fkTendencia, classeDeArmadura, tipoDeArmadura, pontosDeVida, formulaVida, deslocamento, deslocamentoEscavando, deslocamentoEscalada, deslocamentoVoo, deslocamentoNado, forca, forcaModificador, destreza, destrezaModificador, constituicao, constituicaoModificador, inteligencia, inteligenciaModificador, sabedoria, sabedoriaModificador, carisma, carismaModificador, fkNivelDeDesafio, fkBonusDeProficienciaPorND, vulnerabilidades, resistenciasDano, imunidadesDano, imunidadesCondicao, sentidos, idiomas, pericias, reacoes, equipamento, acoesLendarias, acoesDeCovil, efeitosRegionais) VALUES
+(NULL, 'Coruja', 2, NULL, 1, 10, 11, NULL, 1, '1d4-1', '1.5', NULL, NULL, '18', NULL, 3, -3, 13, 1, 8, -1, 2, -4, 14, 2, 7, -2, 2, 2, NULL, NULL, NULL, NULL, 'Visão no escuro 36 m, Percepção passiva 14', NULL, 'Furtividade +3, Percepcao +4', NULL, NULL, NULL, NULL, NULL),
+(NULL, 'Dragão Negro Ancião', 6, NULL, 6, 9, 22, 'armadura natural', 367, '21d20 + 147', '12', NULL, NULL, '24', 12, 27, 8, 14, 2, 25, 7, 16, 3, 15, 2, 19, 4, 26, 27, NULL, NULL, "ácido", NULL, 'Percepção às cegas 18 m, Visão no escuro 36 m, Percepção passiva 26', 'Comum, Dracônico', 'Furtividade +9, Percepcao +16', NULL, NULL, 'O dragão pode realizar 3 ações lendárias, escolhidas dentre as opções abaixo. Apenas uma ação lendária pode ser usada por vez e apenmas no final do turno de outra criatura. O dragão recupera as ações lendárias gastas no começo do turno dele.', 'Acoes de covil', 'Efeitos regionais');
 
+/*Traços especiais de criaturas */
 INSERT INTO tracosEspeciaisCriaturas VALUES
+/* Coruja */
 (NULL, 'Sobrevoo', 'A coruja não provoca ataque de oportunidade quando ela voa para fora do alcance de um inimigo.', 1),
-(NULL, 'Visão e audição aguçados', 'A coruja tem vantagem em testes de Sabedoria (Percepção) relacionados à visão ou audição', 1);
+(NULL, 'Visão e audição aguçados', 'A coruja tem vantagem em testes de Sabedoria (Percepção) relacionados à visão ou audição', 1),
+/* Dragão Negro Ancião */
+(NULL, 'Anfíbio', 'O drgão pode respirar ar e água', 2),
+(NULL, 'Resistência Lendária (3/Dia)', 'Se o dragão falhar em um teste de resistência, ele pode escolher ', 2);
 
+/* Ações de criaturas */
 INSERT INTO acoesCriaturas VALUES
-(NULL, 'Garras', 'Ataque corpo-a-corpo com arma: +3 para atingir, alcance 1,5m, um alvo. Acerto 1 de dano cortante.', 1);
+/* Coruja */
+(NULL, 'Garras', 'Ataque corpo-a-corpo com arma: +3 para atingir, alcance 1,5m, um alvo. Acerto 1 de dano cortante.', 1),
+/* Dragão Negro Ancião */
+(NULL, 'Ataques Múltiplos', 'O dragão pode usar sua Presença Aterradora, ele pode então, realizar três ataques: um com sua mordida e dois com suas garras.', 2),
+(NULL, 'Mordida', 'Ataque Corpo-a-Corpo com Arma: +15 para atingir, alcance 4,5 m, um alvo. Acerto 19 (2d10 + 8) de dano perfurante mais 9 (2d8) de dano de ácido.', 2), 
+(NULL, 'Garra', 'Ataque Corpo-a-Corpo com Arma: +15 para atingir, alcance 3 m, um alvo. Acerto: 15 (2d6 + 8) de dano cortante.', 2),
+(NULL, 'Cauda', 'Ataque Corpo-a-Corpo com Arma: +15 para atingir, alcance 6 m, um alvo. Acerto: 17 (2d8 + 8) de dano de concussão.', 2),
+(NULL, 'Presença Aterradora', 'Cada criatura, à escolha do dragão, que esteja a até 36 metros do dragão e esteja ciente disso, deve ser bem sucedida num teste de resistência de Sabedoria CD 19 ou ficará amedrontada por 1 minuto. Uma criatura pode repetir o teste de resistência no final de cada um dos turnos dela, terminando o efeito sobre si, caso obtenha sucesso. Se o teste de resitência de uma criatura for bem sucedido ou caso o efeito termine sobre ela, a criatura ficará imune a Presença Aterradora do dragão pelas próximas 24 horas.', 2),
+(NULL, 'Sopro Ácido (Recarrega 5-6)', 'O dragão pode expelir ácido em uma linha com 27 metros de comprimento e 3 metros de largura. Cada criatura na linha deve realizar um teste de resistência de Destreza CD 22, sofrendo 67 (15d8) de dano de ácido se falhar na resistência, ou metade desse dano caso obtenha sucesso.', 2);
+
+/* Ações lendárias de criaturas */
+INSERT INTO acoesLendariasCriaturas VALUES
+(NULL, 'Detectar', 'O dragão realiza um teste de Sabedoria (Percepção)', 2),
+(NULL, 'Ataque com Cauda', 'O dragão realiza um ataque de cauda', 2),
+(NULL, 'Ataque de Asas (Custa 2 Ações)', 'O dragão bate suas asas. Cada criatura a até 4,5 metros do dragão deve ser bem sucedida em um teste de resitência de Destreza CD 23 ou sofrerá 15 (2d6 + 8) de dano de concussão e cairá no chão. Após bater suas asas, o dragão pode voar até metade do seu deslocamento de voo', 2);
 
 /*
 SELECT * FROM usuarios;
