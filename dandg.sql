@@ -176,7 +176,6 @@ CREATE TABLE criaturas (
     imunidadesDano VARCHAR(50),
     imunidadesCondicao VARCHAR(50),
     sentidos VARCHAR(500),
-    idiomas VARCHAR(50),
     pericias VARCHAR(50),
     reacoes VARCHAR(50),
     equipamento VARCHAR(50),
@@ -188,6 +187,13 @@ CREATE TABLE criaturas (
     FOREIGN KEY (fkTendencia) REFERENCES tendencias(idTendencia),
     FOREIGN KEY (fkNivelDeDesafio) REFERENCES niveisDeDesafio(idNivelDeDesafio),
     FOREIGN KEY (fkBonusDeProficienciaPorND) REFERENCES bonusDeProficienciaPorND(idBonusDeProficienciaPorND)
+);
+
+CREATE TABLE criaturas_idiomas (
+	fkIdCriatura INT NOT NULL,
+    fkIdIdioma INT NOT NULL,
+    FOREIGN KEY (fkIdCriatura) REFERENCES criaturas(idCriatura),
+    FOREIGN KEY (fkIdIdioma) REFERENCES idiomas(idIdioma)
 );
 
 CREATE TABLE tracosEspeciaisCriaturas (

@@ -359,9 +359,14 @@ INSERT INTO bonusDeProficienciaPorND VALUES
 (NULL, '34', 9);
 
 /* Criaturas */
-INSERT INTO criaturas(idCriatura, nomeCriatura, fkTipoDeCriatura, tipoDeCriaturaExtra, fkCategoriaDeTamanho, fkTendencia, classeDeArmadura, tipoDeArmadura, pontosDeVida, formulaVida, deslocamento, deslocamentoEscavando, deslocamentoEscalada, deslocamentoVoo, deslocamentoNado, forca, forcaModificador, destreza, destrezaModificador, constituicao, constituicaoModificador, inteligencia, inteligenciaModificador, sabedoria, sabedoriaModificador, carisma, carismaModificador, fkNivelDeDesafio, fkBonusDeProficienciaPorND, vulnerabilidades, resistenciasDano, imunidadesDano, imunidadesCondicao, sentidos, idiomas, pericias, reacoes, equipamento, acoesLendarias, acoesDeCovil, efeitosRegionais) VALUES
-(NULL, 'Coruja', 2, NULL, 1, 10, 11, NULL, 1, '1d4-1', '1.5', NULL, NULL, '18', NULL, 3, -3, 13, 1, 8, -1, 2, -4, 14, 2, 7, -2, 2, 2, NULL, NULL, NULL, NULL, 'Visão no escuro 36 m, Percepção passiva 14', NULL, 'Furtividade +3, Percepcao +4', NULL, NULL, NULL, NULL, NULL),
-(NULL, 'Dragão Negro Ancião', 6, NULL, 6, 9, 22, 'armadura natural', 367, '21d20 + 147', '12', NULL, NULL, '24', 12, 27, 8, 14, 2, 25, 7, 16, 3, 15, 2, 19, 4, 26, 27, NULL, NULL, "ácido", NULL, 'Percepção às cegas 18 m, Visão no escuro 36 m, Percepção passiva 26', 'Comum, Dracônico', 'Furtividade +9, Percepcao +16', NULL, NULL, 'O dragão pode realizar 3 ações lendárias, escolhidas dentre as opções abaixo. Apenas uma ação lendária pode ser usada por vez e apenmas no final do turno de outra criatura. O dragão recupera as ações lendárias gastas no começo do turno dele.', 'Acoes de covil', 'Efeitos regionais');
+INSERT INTO criaturas(idCriatura, nomeCriatura, fkTipoDeCriatura, tipoDeCriaturaExtra, fkCategoriaDeTamanho, fkTendencia, classeDeArmadura, tipoDeArmadura, pontosDeVida, formulaVida, deslocamento, deslocamentoEscavando, deslocamentoEscalada, deslocamentoVoo, deslocamentoNado, forca, forcaModificador, destreza, destrezaModificador, constituicao, constituicaoModificador, inteligencia, inteligenciaModificador, sabedoria, sabedoriaModificador, carisma, carismaModificador, fkNivelDeDesafio, fkBonusDeProficienciaPorND, vulnerabilidades, resistenciasDano, imunidadesDano, imunidadesCondicao, sentidos, pericias, reacoes, equipamento, acoesLendarias, acoesDeCovil, efeitosRegionais) VALUES
+(NULL, 'Coruja', 2, NULL, 1, 10, 11, NULL, 1, '1d4-1', '1.5', NULL, NULL, '18', NULL, 3, -3, 13, 1, 8, -1, 2, -4, 14, 2, 7, -2, 2, 2, NULL, NULL, NULL, NULL, 'Visão no escuro 36 m, Percepção passiva 14', 'Furtividade +3, Percepcao +4', NULL, NULL, NULL, NULL, NULL),
+(NULL, 'Dragão Negro Ancião', 6, NULL, 6, 9, 22, 'armadura natural', 367, '21d20 + 147', '12', NULL, NULL, '24', 12, 27, 8, 14, 2, 25, 7, 16, 3, 15, 2, 19, 4, 26, 27, NULL, NULL, "ácido", NULL, 'Percepção às cegas 18 m, Visão no escuro 36 m, Percepção passiva 26', 'Furtividade +9, Percepcao +16', NULL, NULL, 'O dragão pode realizar 3 ações lendárias, escolhidas dentre as opções abaixo. Apenas uma ação lendária pode ser usada por vez e apenmas no final do turno de outra criatura. O dragão recupera as ações lendárias gastas no começo do turno dele.', 'Acoes de covil', 'Efeitos regionais');
+
+INSERT INTO criaturas_idiomas VALUES
+/* Dragão Negro Ancião fala Comum e Draconico */ 
+(2, 4),
+(2, 6);
 
 /*Traços especiais de criaturas */
 INSERT INTO tracosEspeciaisCriaturas VALUES
@@ -413,4 +418,5 @@ SELECT * FROM bonusDeProficienciaPorND;
 SELECT * FROM criaturas;
 SELECT * FROM tracosEspeciaisCriaturas;
 SELECT * FROM acoesCriaturas;
+SELECT * FROM acoesLendariasCriaturas;
 */
